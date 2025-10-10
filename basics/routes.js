@@ -26,6 +26,9 @@
             const message = parsedBody.split('=')[1];
             console.log(parsedBody);
             fs.writeFile('message.txt', message, err=>{
+                if(err){
+                    console.error(err);
+                }
                 res.statusCode = 302;
                 res.setHeader('Location', '/');
                 return res.end();
@@ -46,8 +49,8 @@
  module.exports = requestHandler;
 
  //exporting more than one
- module.exports = {
-    handler: requestHandler,
-    someText: "This is interesting"
- }
+//  module.exports = {
+//     handler: requestHandler,
+//     someText: "This is interesting"
+//  }
  
