@@ -12,7 +12,6 @@
     }
     // process.exit();
 
-    
     if(url === '/message' && method==='POST'){
         const body = [];
         //event listener on data event
@@ -24,7 +23,7 @@
             const parsedBody = Buffer.concat(body).toString();
             //split from '=' starting from index 1
             const message = parsedBody.split('=')[1];
-            console.log(parsedBody);
+           
             fs.writeFile('message.txt', message, err=>{
                 if(err){
                     console.error(err);
@@ -53,4 +52,7 @@
 //     handler: requestHandler,
 //     someText: "This is interesting"
 //  }
+
+// node does not run line by line but runs with callback and it is event driven
+
  

@@ -32,3 +32,11 @@ server.listen(PORT, ()=>{
 // node app.js => start script => Parse Code, Register Variables and Functions => The Node Application [Event Loop] > Keeps on running as long as there are event listeners registered
 
 //Streams and Buffers
+
+
+// ==================================================
+// FIXING ERRORS
+//===================================================
+//1. Syntax error - easy to fix (caused by typos)
+//2. Runtime Errors - not typos but break when they run
+//3. Logical Errors - app doesn't work how it should
